@@ -5,8 +5,8 @@
 [sub_resource type="GDScript" id="GDScript_ww1fo"]
 script/source = "extends CharacterBody2D
 
-const ACCELERATION = 500
-const MAX_SPEED = 80
+const ACCELERATION = 500 # Ajustar para mejorar playfeel
+const MAX_SPEED = 80 # Ajustar para mejorar playfeel
 const FRICTION = 500 # Ajustar para mejorar playfeel
 
 @onready var animationPlayer = $AnimationPlayer
