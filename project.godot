@@ -77,6 +77,7 @@ Settings/Show_Tooltips=true
 config/name="Action RPG"
 run/main_scene="res://survivors_game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+config/icon="res://Player Icon.png"
 
 [audio]
 
