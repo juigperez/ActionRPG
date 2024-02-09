@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://11ong70tr8sa"]
+
+[ext_resource type="Texture2D" uid="uid://cgh4xwlqdgnmn" path="res://World/Bush.png" id="1_66e4q"]
+[ext_resource type="Texture2D" uid="uid://blnte7jl71mpm" path="res://Player/Player.png" id="2_pplg5"]
+
+[sub_resource type="GDScript" id="GDScript_ww1fo"]
+script/source = "extends CharacterBody2D
+
+func _physics_process(delta):
+	if Input.is_action_pressed(\"ui_right\"):
+		velocity.x = 4
+	elif Input.is_action_pressed(\"ui_left\"):
+		velocity.x = -4
+	elif Input.is_action_pressed(\"ui_up\"):
+		velocity.y = 4
+	elif Input.is_action_pressed(\"ui_down\"):
+		velocity.y = -4
+	else:
+		velocity.x = 0
+		velocity.y = 0
+	
+	move_and_collide(velocity)
+"
+
+[node name="World" type="Node2D"]
+
+[node name="Bush" type="Sprite2D" parent="."]
+position = Vector2(29, 29)
+texture = ExtResource("1_66e4q")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(97, 48)
+script = SubResource("GDScript_ww1fo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("2_pplg5")
+hframes = 60
