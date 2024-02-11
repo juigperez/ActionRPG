@@ -75,7 +75,7 @@ Settings/Show_Tooltips=true
 [application]
 
 config/name="Action RPG"
-run/main_scene="res://survivors_game.tscn"
+run/main_scene="res://World.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://Player Icon.png"
 
@@ -178,6 +178,7 @@ roll={
 3d_physics/layer_2="player"
 2d_physics/layer_3="Hitbox"
 2d_physics/layer_4="Hurtbox"
+2d_physics/layer_5="Enemy"
 
 [rendering]
 
